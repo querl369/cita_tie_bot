@@ -1,0 +1,22 @@
+{
+  "name": "cita_tie_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/querl369/cita_tie_bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/querl369/cita_tie_bot/issues"
+  },
+  "homepage": "https://github.com/querl369/cita_tie_bot#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^22.5.0"
+  }
+}
