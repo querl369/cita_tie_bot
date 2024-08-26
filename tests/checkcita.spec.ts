@@ -6,7 +6,6 @@ test.describe('Check cita availability', () => {
     const provincePage = new ProvincePage(page);
     await provincePage.open();
     await provincePage.selectProvince('Castellón');
-    await page.pause();
   });
 })
 
