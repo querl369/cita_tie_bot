@@ -9,7 +9,7 @@ export class ProvincePage {
     constructor(page: Page) {
       this.page = page;
       this.buttonAccept = page.locator('#btnAceptar');
-      this.buttonExit = page.locator('##btnVolver');
+      this.buttonExit = page.locator('#btnVolver');
       this.dropdownProvinceSelection = page.locator('#form');
     }
   
