@@ -1,13 +1,15 @@
 import { expect, type Locator, type Page } from '@playwright/test';
-
+import { OfficePage } from './office'
 export class ProvincePage {
     readonly page: Page;
+    readonly officePage: OfficePage;
     readonly buttonAccept: Locator;
     readonly buttonExit: Locator;
     readonly dropdownProvinceSelection: Locator;
   
     constructor(page: Page) {
       this.page = page;
+      this.officePage = new OfficePage(page);
       this.buttonAccept = page.locator('#btnAceptar');
       this.buttonExit = page.locator('#btnVolver');
       this.dropdownProvinceSelection = page.locator('#form');
@@ -22,5 +24,10 @@ export class ProvincePage {
   
     async selectProvince(province: string) {
       await this.dropdownProvinceSelection.selectOption(province)
+    }
+
+    async proceedToOfficePage() {
+      await this.buttonAccept.click()
+      await this.officePage.waitForPageLoad()
     }
 }
