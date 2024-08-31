@@ -25,12 +25,15 @@ export class OfficePage {
     async selectOffice() {
       await this.dropdownOfficeSelection.selectOption('4')
     }
-      
+
     async selectCardOption() {
         await this.dropdownCardOptionSelection.selectOption('4112')
     }
 
     async proceedToCitaPreviaInfoPage() {
+      setTimeout(() => {
+        console.log("Delayed for 1 second.");
+      }, 1000);
         await this.buttonAccept.click({delay: 1000})
         await this.citaPreviaInfoPage.waitForPageLoad()
     }

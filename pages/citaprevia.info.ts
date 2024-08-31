@@ -20,6 +20,9 @@ export class CitaPreviaInfoPage {
     }
 
     async proceedToCitaPreviaNiePage() {
+        setTimeout(() => {
+            console.log("Delayed for 1 second.");
+          }, 1000);
         await this.buttonEnter.click({delay: 1000})
         await this.citaPreviaNiePage.waitForPageLoad()
     }
